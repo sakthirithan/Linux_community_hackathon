@@ -80,7 +80,7 @@ sudo systemctl reload nginx
 sudo systemctl status nginx
 ```
 
-![Nginx Virtual Host Setup on Port 8080](./Screenshot%202026-10-08%20101041.png)
+![Nginx Virtual Host Setup on Port 8080](./04_nginx_site_config_and_reload.png)
 
 *Figure 4.1: Directory creation, Nginx site configuration link, syntax test, and service reload.*
 
@@ -97,7 +97,7 @@ sudo ss -lntp | grep ':8080'
 curl http://localhost:8080
 ```
 
-![Port 8080 Socket Status & Local Curl](./Screenshot%202026-10-08%20101057.png)
+![Port 8080 Socket Status & Local Curl](./05_socket_listener_and_local_curl.png)
 
 *Figure 4.2: Socket listener verification (`sudo ss -lntp`) and local `curl http://localhost:8080`.*
 
@@ -118,11 +118,11 @@ curl http://10.10.144.102:8080
 - Primary Site: `http://10.10.144.102` (Port 80) -> Serves Task 1/3 page.
 - Secondary Site: `http://10.10.144.102:8080` (Port 8080) -> Serves Task 4 page.
 
-![Dual Port Side-by-Side Browser View](./Screenshot%202026-10-08%20100838.png)
+![Dual Port Side-by-Side Browser View](./01_dual_port_browser_view.png)
 
 *Figure 4.3: Side-by-side browser view of Port 80 (Main) and Port 8080 (Task 4).*
 
-![Remote Client Curl Verification](./Screenshot%202026-10-08%20101007.png)
+![Remote Client Curl Verification](./02_remote_client_curl_port8080.png)
 
 *Figure 4.4: Fetching headers and content from remote machine via `curl -I http://10.10.144.102:8080`.*
 

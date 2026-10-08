@@ -17,7 +17,7 @@ Set up an Nginx web server on a Linux machine to host and serve a custom HTML pa
 ### Step 1: Preview Provided Custom HTML Page
 The hackathon organizers provided an initial custom HTML page template for hosting.
 
-![Organizers Custom HTML Page](./Screenshot%202026-10-08%20090416.png)
+![Organizers Custom HTML Page](./01_organizer_html_template.png)
 
 *Figure 1.1: Custom HTML page template provided by organizers.*
 
@@ -31,7 +31,7 @@ sudo apt update
 sudo apt install nginx -y
 ```
 
-![Installing Nginx Server](./Screenshot%202026-10-08%20092329.png)
+![Installing Nginx Server](./02_install_nginx.png)
 
 *Figure 1.2: Terminal execution of `sudo apt install nginx -y`.*
 
@@ -59,7 +59,7 @@ curl -I http://localhost
 - Service Status: `active (running)`
 - HTTP Header: `HTTP/1.1 200 OK`
 
-![Nginx Status & Version Check](./Screenshot%202026-10-08%20092340.png)
+![Nginx Status & Version Check](./03_nginx_status_check.png)
 
 *Figure 1.3: Verification of Nginx version, service status, and `curl` HTTP header response.*
 
@@ -79,7 +79,7 @@ sudo cp /var/www/html/index.nginx-debian.html /var/www/html/index.nginx-debian.h
 cd /var/www/html/
 ```
 
-![Backup Default HTML File](./Screenshot%202026-10-08%20092350.png)
+![Backup Default HTML File](./04_backup_default_html.png)
 
 *Figure 1.4: Inspecting web directory and backing up `index.nginx-debian.html`.*
 
@@ -92,7 +92,7 @@ Download the custom HTML file directly into `/var/www/html/index.html` from the 
 sudo curl -o index.html http://10.10.110.79:3923/test/index.html
 ```
 
-![Download Custom HTML Page](./Screenshot%202026-10-08%20092359.png)
+![Download Custom HTML Page](./05_download_custom_html.png)
 
 *Figure 1.5: Fetching custom HTML file from organizer link to `/var/www/html/index.html`.*
 
@@ -127,7 +127,7 @@ head -30 index.html
 </html>
 ```
 
-![Verify HTML File Structure](./Screenshot%202026-10-08%20092410.png)
+![Verify HTML File Structure](./06_verify_index_html_structure.png)
 
 *Figure 1.6: Cleaning web directory and confirming custom `index.html` code.*
 
@@ -150,7 +150,7 @@ sudo systemctl reload nginx
 sudo systemctl status nginx
 ```
 
-![Configuration Syntax Test and Reload](./Screenshot%202026-10-08%20092420.png)
+![Configuration Syntax Test and Reload](./07_chmod_nginx_test_reload.png)
 
 *Figure 1.7: Permissions configuration, `sudo nginx -t` check, and reloading Nginx.*
 
@@ -163,7 +163,7 @@ Verified HTTPS endpoint status before certificate setup (confirms port 443 is cl
 curl https://localhost
 ```
 
-![HTTPS Check Pre-Task 5](./Screenshot%202026-10-08%20092427.png)
+![HTTPS Check Pre-Task 5](./08_https_port443_precheck.png)
 
 *Figure 1.8: Verifying port 443 response behavior prior to HTTPS migration.*
 
@@ -176,7 +176,7 @@ Confirm that Nginx serves the full HTML file locally via `curl` and through the 
 curl http://localhost
 ```
 
-![Final Task 1 Verification](./Screenshot%202026-10-08%20092438.png)
+![Final Task 1 Verification](./09_final_local_http_curl_verification.png)
 
 *Figure 1.9: Successful `curl http://localhost` returning full hosted custom HTML page.*
 

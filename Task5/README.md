@@ -85,7 +85,7 @@ curl -k https://10.10.144.102
 </html>
 ```
 
-![HTTPS Browser & Terminal Verification](./Screenshot%202026-10-08%20102157.png)
+![HTTPS Browser & Terminal Verification](./01_https_ssl_curl_and_browser_verification.png)
 
 *Figure 5.1: Terminal `curl -k https://10.10.144.102` execution and HTTPS SSL connection warning in Chrome.*
 

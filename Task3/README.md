@@ -35,7 +35,7 @@ sudo nano /var/www/html/index.html
 <p>Roll No: 7376242AD284</p>
 ```
 
-![Remote Editing via SSH](./Screenshot%202026-10-08%20095751.png)
+![Remote Editing via SSH](./01_ssh_connect_and_nano_edit.png)
 
 *Figure 3.1: Editing `/var/www/html/index.html` over SSH connection from remote terminal.*
 
@@ -49,7 +49,7 @@ sudo nginx -t
 exit
 ```
 
-![Nginx Test and Remote Curl Verification](./Screenshot%202026-10-08%20095910.png)
+![Nginx Test and Remote Curl Verification](./02_nginx_test_and_remote_curl.png)
 
 *Figure 3.2: Configuration test and remote terminal `curl http://10.10.144.102` output.*
 
@@ -80,7 +80,7 @@ curl http://10.10.144.102
 </html>
 ```
 
-![Live Browser & Terminal Verification](./Screenshot%202026-10-08%20100021.png)
+![Live Browser & Terminal Verification](./03_browser_and_terminal_verification.png)
 
 *Figure 3.3: Verification of live webpage updates in browser and remote terminal.*
 

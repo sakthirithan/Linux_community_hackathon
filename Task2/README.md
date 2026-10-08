@@ -54,7 +54,7 @@ Approximate round trip times in milli-seconds:
     Minimum = 0ms, Maximum = 1ms, Average = 0ms
 ```
 
-![Ping Verification from Remote Client](./Screenshot%202026-10-08%20094651.png)
+![Ping Verification from Remote Client](./02_host_ip_and_client_ping.png)
 
 *Figure 2.1: Terminal ping verification and active Nginx status on host `10.10.144.102`.*
 
@@ -81,7 +81,7 @@ ETag: "6ac7126d-17e"
 Accept-Ranges: bytes
 ```
 
-![Remote Curl HTTP Response Verification](./Screenshot%202026-10-08%20094659.png)
+![Remote Curl HTTP Response Verification](./03_remote_client_curl_headers.png)
 
 *Figure 2.2: Fetching headers and HTML content from remote client via `curl -I http://10.10.144.102`.*
 
