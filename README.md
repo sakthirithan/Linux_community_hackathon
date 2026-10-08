@@ -1,6 +1,6 @@
 # Linux Community Hackathon - Linux OpenHack’26 🐧🚀
 
-Complete documentation repository for **Linux OpenHack’26**, containing step-by-step terminal commands, network configuration details, terminal outputs, and visual evidence for each hackathon task.
+Complete documentation repository for **Linux OpenHack’26**, containing step-by-step terminal commands, network configuration details, terminal outputs, and visual screenshot evidence for all 5 hackathon tasks.
 
 ---
 
@@ -20,7 +20,7 @@ Complete documentation repository for **Linux OpenHack’26**, containing step-b
 | **Task 2** | Access the hosted HTML page from another computer on the same network. | ✅ Completed | [Task 2 README](./Task2/README.md) |
 | **Task 3** | Modify the custom HTML page from another computer and verify changes. | ✅ Completed | [Task 3 README](./Task3/README.md) |
 | **Task 4** | Run a different HTML page on a separate port (8080) and verify access. | ✅ Completed | [Task 4 README](./Task4/README.md) |
-| **Task 5** | Convert the hosted page into an HTTPS page and verify secure access. | ⏳ Pending | Task 5 Guide |
+| **Task 5** | Convert the hosted page into an HTTPS page and verify secure access. | ✅ Completed | [Task 5 README](./Task5/README.md) |
 
 ---
 
@@ -49,13 +49,16 @@ Complete documentation repository for **Linux OpenHack’26**, containing step-b
 │   ├── Screenshot 2026-10-08 095751.png
 │   ├── Screenshot 2026-10-08 095910.png
 │   └── Screenshot 2026-10-08 100021.png
-└── Task4/
-    ├── README.md                  # Detailed Task 4 terminal steps & evidence
-    ├── Screenshot 2026-10-08 100838.png
-    ├── Screenshot 2026-10-08 101007.png
-    ├── Screenshot 2026-10-08 101024.png
-    ├── Screenshot 2026-10-08 101041.png
-    └── Screenshot 2026-10-08 101057.png
+├── Task4/
+│   ├── README.md                  # Detailed Task 4 terminal steps & evidence
+│   ├── Screenshot 2026-10-08 100838.png
+│   ├── Screenshot 2026-10-08 101007.png
+│   ├── Screenshot 2026-10-08 101024.png
+│   ├── Screenshot 2026-10-08 101041.png
+│   └── Screenshot 2026-10-08 101057.png
+└── Task5/
+    ├── README.md                  # Detailed Task 5 terminal steps & evidence
+    └── Screenshot 2026-10-08 102157.png
 ```
 
 ---
@@ -63,20 +66,24 @@ Complete documentation repository for **Linux OpenHack’26**, containing step-b
 ## 🔍 Detailed Task Summaries
 
 ### 🔹 [Task 1: Nginx Server Setup & Custom HTML Hosting](./Task1/README.md)
-- **Summary:** Installed Nginx, downloaded the custom HTML page from the organizer's link into `/var/www/html/index.html`, set up file permissions (`chmod 777`), tested syntax (`nginx -t`), reloaded Nginx, and verified local serving via `curl http://localhost`.
+- **Summary:** Installed Nginx, downloaded organizer's custom HTML template to `/var/www/html/index.html`, set permissions (`chmod 777`), tested syntax (`nginx -t`), reloaded Nginx, and verified local HTTP serving via `curl http://localhost`.
 - **Evidence:** 9 step-by-step screenshots.
 
 ### 🔹 [Task 2: LAN Accessibility Verification](./Task2/README.md)
-- **Summary:** Identified Linux server IP (`10.10.144.102`), verified cross-machine ping response from remote Windows client, tested HTTP header response via `curl -I http://10.10.144.102`, and confirmed browser access across the network.
+- **Summary:** Identified Linux server IP (`10.10.144.102`), verified network connectivity via `ping`, tested HTTP header response via `curl -I http://10.10.144.102`, and confirmed browser access across the network.
 - **Evidence:** 2 step-by-step screenshots.
 
 ### 🔹 [Task 3: Remote Modification via SSH](./Task3/README.md)
-- **Summary:** Enabled SSH daemon on the server, established SSH session from client computer, edited `/var/www/html/index.html` to add student Name and Roll Number, and verified real-time webpage updates via `curl` and web browser.
+- **Summary:** Enabled SSH daemon on server, connected remotely via SSH, modified `/var/www/html/index.html` to add student Name (`SAKTHI M`) and Roll Number (`7376242AD284`), and verified live updates.
 - **Evidence:** 3 step-by-step screenshots.
 
 ### 🔹 [Task 4: Separate Port Hosting (Port 8080)](./Task4/README.md)
-- **Summary:** Created `/var/www/task4/index.html`, created an Nginx site configuration in `/etc/nginx/sites-available/task4` listening on port `8080`, enabled symlink, reloaded Nginx, verified socket via `ss -lntp`, and tested dual-port browser rendering.
+- **Summary:** Created `/var/www/task4/index.html`, created Nginx virtual host listening on port `8080`, enabled symlink, verified active listening socket (`ss -lntp`), and tested dual-port browser rendering.
 - **Evidence:** 5 step-by-step screenshots.
+
+### 🔹 [Task 5: HTTPS Conversion & Secure Verification](./Task5/README.md)
+- **Summary:** Generated self-signed SSL certificate with `openssl`, updated Nginx configuration to enable SSL listening on port `443`, reloaded Nginx, and verified secure access via `curl -k https://10.10.144.102` and browser HTTPS session.
+- **Evidence:** 1 step-by-step screenshot.
 
 ---
 
